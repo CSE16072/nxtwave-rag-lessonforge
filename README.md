@@ -1,4 +1,3 @@
-
 # RAG LessonForge
 
 ## Overview
@@ -7,11 +6,11 @@ RAG LessonForge is a self-evaluating AI lesson generation system designed for In
 
 The system generates beginner-friendly lessons, evaluates them against a strict quality rubric, and regenerates them when they fail evaluation.
 
-The project demonstrates AI-based content generation, structured evaluation, workflow orchestration, feedback-driven retries, and persistent memory.
+This project demonstrates AI-based content generation, structured evaluation, workflow orchestration, feedback-driven retries, and persistent memory.
 
 ## Problem Statement
 
-AI-generated educational content can be too technical, incomplete, or difficult for beginners.
+AI-generated educational content can be too technical, incomplete, or difficult for beginners to understand.
 
 RAG LessonForge aims to improve generated lessons through an automated evaluation and feedback loop.
 
@@ -46,6 +45,7 @@ RAG LessonForge aims to improve generated lessons through an automated evaluatio
 ```text
 nxtwave-rag-lessonforge/
 ├── src/
+│   ├── __init__.py
 │   ├── config.py
 │   ├── state.py
 │   ├── prompts.py
@@ -63,6 +63,7 @@ nxtwave-rag-lessonforge/
 │   └── demo_script.md
 ├── outputs/
 ├── main.py
+├── test_gemini.py
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
@@ -101,11 +102,9 @@ If any criterion fails, the lesson is rejected and regenerated using evaluation 
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-github-repository-url>
+git clone https://github.com/CSE16072/nxtwave-rag-lessonforge.git
 cd nxtwave-rag-lessonforge
 ```
-
-Replace the repository URL with your actual GitHub repository URL.
 
 ### 2. Create a Virtual Environment
 
@@ -124,9 +123,7 @@ pip install -r requirements.txt
 
 ### 4. Configure the Gemini API Key
 
-Create a `.env` file in the project root.
-
-Add:
+Create a `.env` file in the project root and add:
 
 ```text
 GOOGLE_API_KEY=your_gemini_api_key_here
@@ -183,6 +180,7 @@ Additional project documentation is available in the `docs/` directory:
 - AI-based evaluation may not always be perfect.
 - The current system focuses on generating one lesson topic per execution.
 - Persistent memory uses past failures as guidance; it does not automatically modify the evaluation rubric.
+- The current implementation does not retrieve lessons from an external document collection.
 
 ## Future Improvements
 
