@@ -64,6 +64,7 @@ nxtwave-rag-lessonforge/
 ├── outputs/
 ├── main.py
 ├── test_gemini.py
+├── demo_error.py
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
