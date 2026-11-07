@@ -20,7 +20,7 @@ RAG LessonForge aims to improve generated lessons through an automated evaluatio
 - AI-based lesson evaluation
 - Six strict quality criteria
 - PASS/FAIL evaluation
-- Maximum of three generation attempts
+- Maximum of three generation attempts (one initial attempt and up to two retries).
 - Rejection log with failure reasons and correction suggestions
 - Persistent evaluation memory using SQLite
 - Recurring failure detection
@@ -181,7 +181,8 @@ Additional project documentation is available in the `docs/` directory:
 - AI-based evaluation may not always be perfect.
 - The current system focuses on generating one lesson topic per execution.
 - Persistent memory uses past failures as guidance; it does not automatically modify the evaluation rubric.
-- The current implementation does not retrieve lessons from an external document collection.
+- The assessment focuses on generating and evaluating a beginner-friendly lesson about RAG, rather than building a separate RAG retrieval pipeline.
+- Future improvements could include grounding generated lessons in curated educational reference material.
 
 ## Future Improvements
 
